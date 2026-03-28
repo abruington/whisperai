@@ -7,7 +7,7 @@ from fastapi import FastAPI, File, Form, Header, HTTPException, UploadFile
 app = FastAPI(title="Whisper API")
 
 API_KEY = os.getenv("WHISPER_API_KEY", "")
-model = whisper.load_model("small")
+model = whisper.load_model("tiny")
 
 
 def require_api_key(x_api_key: str | None):
